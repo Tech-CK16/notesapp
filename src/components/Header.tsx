@@ -7,11 +7,11 @@ import Typography from '@mui/material/Typography';
 const Header: React.FC = () => {
     return (
         <AppBar color="transparent" position="static">
-            <Toolbar>
+            <Toolbar sx={{ justifyContent: 'center' }}>
                 <img
                     src={LOGO}
                     alt="logo"
-                    style={{ width: 150, marginRight: 10 }}
+                    style={{ width: 250, marginRight: 10 }}
                 />
                 <Typography>💀</Typography>
             </Toolbar>

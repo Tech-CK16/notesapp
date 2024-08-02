@@ -15,7 +15,7 @@ function App() {
     }, []);
 
     const addNotes = (note: NoteObject) => {
-        setNotes([note, ...notes]);
+        setNotes([...notes, note]);
         console.log(notes);
         sessionStorage.setItem('notes', JSON.stringify([note, ...notes]));
     };

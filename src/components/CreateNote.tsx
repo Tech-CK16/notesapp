@@ -9,6 +9,7 @@ import Typography from '@mui/material/Typography';
 import { TITLE_LIMIT, DETAILS_LIMIT } from '../constants/constant';
 
 const Container = styled(Box)`
+    text-align: center;
     & > * {
         margin: 20px 20px 20px 0px;
     }

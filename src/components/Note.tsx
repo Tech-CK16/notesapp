@@ -14,7 +14,8 @@ const StyledCard = styled(Card)`
 
 const Wrapper = styled(Box)`
     & > button {
-        border: 1px solid #000;
+        border: 1px solid red;
+        color: red;
         background: #fff;
         margin-top: 10px;
     }
@@ -35,8 +36,15 @@ const Note: React.FC<INoteProps> = ({ note, deleteNote }) => {
         <StyledCard style={{ backgroundColor: note.color }}>
             <CardContent>
                 <Wrapper>
-                    <Typography>{note.title}</Typography>
-                    <Typography>{note.details}</Typography>
+                    <Typography
+                        variant="h4"
+                        style={{ fontWeight: 'bold', marginBottom: 10 }}
+                    >
+                        {note.title}
+                    </Typography>
+                    <Typography variant="h5" style={{ marginBottom: 10 }}>
+                        {note.details}
+                    </Typography>
                     <Typography>{note.date}</Typography>
                     <Button
                         variant="outlined"

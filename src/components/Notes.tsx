@@ -12,8 +12,16 @@ type INotesProps = {
 const Notes: React.FC<INotesProps> = ({ notes, deleteNote }) => {
     return (
         <Box>
-            <Typography variant="h5">Notes</Typography>
-            <Box sx={{ display: 'flex' }}>
+            <Typography variant="h3" sx={{ textAlign: 'center' }}>
+                Notes
+            </Typography>
+            <Box
+                sx={{
+                    display: 'flex',
+                    flexWrap: 'wrap',
+                    justifyContent: 'center',
+                }}
+            >
                 {notes.map(note => (
                     <Note key={note.id} note={note} deleteNote={deleteNote} />
                 ))}
